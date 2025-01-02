@@ -64,10 +64,16 @@ else
     print("Ran BLACKLIST Checker scan...")
     print("No BLACKLIST Detected! Running script..")
     while wait() do
-    game:GetService("ReplicatedStorage").Events.AntyCheat..12Plus:FireServer(true)
-    game:GetService("ReplicatedStorage").Events.AntyCheat..3Plus:FireServer(true)
-    game:GetService("ReplicatedStorage").Events.AntyCheat..Event:FireServer(true)
-    game:GetService("ReplicatedStorage").Events.AntyCheat..3EggPlayer:FireServer(true)
-    game:GetService("ReplicatedStorage").Events.AntyCheat..1:FireServer(true)
+local remoteNames = {".12Plus", ".3Plus", ".Event", ".3EggPlayer", ".1"}
+local eventsFolder = game.ReplicatedStorage:WaitForChild("Events")
+
+for _, remoteName in ipairs(remoteNames) do
+    local remote = eventsFolder:FindFirstChild(remoteName)
+    
+    if remote then
+        remote:FireServer()
+    end
+end
+
 end
 end
