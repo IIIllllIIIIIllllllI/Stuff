@@ -64,10 +64,10 @@ else
     print("Ran BLACKLIST Checker scan...")
     print("No BLACKLIST Detected! Running script..")
     while wait() do
-    game:GetService("ReplicatedStorage").Events.Plus12:FireServer(true)
-    game:GetService("ReplicatedStorage").Events.Plus3:FireServer(true)
-    game:GetService("ReplicatedStorage").Events.StartEvent:FireServer(true)
-    game:GetService("ReplicatedStorage").Events.PlayerEgg:FireServer(true)
-    game:GetService("ReplicatedStorage").Events.KurkaBuy:FireServer(true)
+    game:GetService("ReplicatedStorage").Events.AntyCheat..12Plus:FireServer(true)
+    game:GetService("ReplicatedStorage").Events.AntyCheat..3Plus:FireServer(true)
+    game:GetService("ReplicatedStorage").Events.AntyCheat..Event:FireServer(true)
+    game:GetService("ReplicatedStorage").Events.AntyCheat..3EggPlayer:FireServer(true)
+    game:GetService("ReplicatedStorage").Events.AntyCheat..1:FireServer(true)
 end
 end
