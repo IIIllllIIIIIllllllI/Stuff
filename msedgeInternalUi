@@ -1,0 +1,199 @@
+local internalmsedge = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Editor = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local Execute = Instance.new("ImageButton")
+local UICorner_3 = Instance.new("UICorner")
+local title = Instance.new("TextLabel")
+local Exit = Instance.new("TextButton")
+internalmsedge.Name = "internalmsedge"
+internalmsedge.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+internalmsedge.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Main.Name = "Main"
+Main.Parent = internalmsedge
+Main.BackgroundColor3 = Color3.fromRGB(0, 192, 0)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.222137988, 0, 0.212311551, 0)
+Main.Size = UDim2.new(0, 733, 0, 458)
+UICorner.Parent = Main
+Editor.Name = "Editor"
+Editor.Parent = Main
+Editor.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Editor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Editor.BorderSizePixel = 0
+Editor.Position = UDim2.new(0.00954979565, 0, 0.144104809, 0)
+Editor.Size = UDim2.new(0, 718, 0, 384)
+Editor.Font = Enum.Font.SourceSans
+Editor.PlaceholderText = "Welcome to the msedge Internal :)"
+Editor.Text = ""
+Editor.TextColor3 = Color3.fromRGB(0, 0, 0)
+Editor.TextSize = 20.000
+Editor.TextXAlignment = Enum.TextXAlignment.Left
+Editor.TextYAlignment = Enum.TextYAlignment.Top
+UICorner_2.Parent = Editor
+Execute.Name = "Execute"
+Execute.Parent = Main
+Execute.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(0.473396987, 0, 0.0458515286, 0)
+Execute.Size = UDim2.new(0, 38, 0, 37)
+Execute.Image = "http://www.roblox.com/asset/?id=7063694142"
+UICorner_3.Parent = Execute
+title.Name = "title"
+title.Parent = Main
+title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title.BackgroundTransparency = 1.000
+title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+title.BorderSizePixel = 0
+title.Position = UDim2.new(0.342428386, 0, 0, 0)
+title.Size = UDim2.new(0, 230, 0, 21)
+title.Font = Enum.Font.Nunito
+title.Text = "msedge Internal"
+title.TextColor3 = Color3.fromRGB(0, 0, 0)
+title.TextScaled = true
+title.TextSize = 14.000
+title.TextWrapped = true
+Exit.Name = "Exit"
+Exit.Parent = Main
+Exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Exit.BackgroundTransparency = 1.000
+Exit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Exit.BorderSizePixel = 0
+Exit.Position = UDim2.new(0.965893567, 0, 0, 0)
+Exit.Size = UDim2.new(0, 25, 0, 31)
+Exit.Font = Enum.Font.Michroma
+Exit.Text = "X"
+Exit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Exit.TextSize = 14.000
+local function OOTCMO_fake_script()
+	local script = Instance.new('LocalScript', Execute)
+
+	--[[
+		███╗   ███╗███████╗███████╗██████╗  ██████╗ ███████╗
+		████╗ ████║██╔════╝██╔════╝██╔══██╗██╔════╝ ██╔════╝
+		██╔████╔██║███████╗█████╗  ██║  ██║██║  ███╗█████╗  
+		██║╚██╔╝██║╚════██║██╔══╝  ██║  ██║██║   ██║██╔══╝  
+		██║ ╚═╝ ██║███████║███████╗██████╔╝╚██████╔╝███████╗
+		╚═╝     ╚═╝╚══════╝╚══════╝╚═════╝  ╚═════╝ ╚══════╝
+	                  Thanks for using msedge.
+	                     - noobergoober :)
+	--]]
+	local button = script.Parent
+	local textbox = script.Parent.Parent.Editor
+	button.MouseButton1Click:Connect(function()
+		pcall(function()
+			loadstring(textbox.Text)()
+		end)
+	end)
+	
+	
+end
+coroutine.wrap(OOTCMO_fake_script)()
+local function ZLFME_fake_script()
+	local script = Instance.new('LocalScript', Exit)
+
+	--[[
+		███╗   ███╗███████╗███████╗██████╗  ██████╗ ███████╗
+		████╗ ████║██╔════╝██╔════╝██╔══██╗██╔════╝ ██╔════╝
+		██╔████╔██║███████╗█████╗  ██║  ██║██║  ███╗█████╗  
+		██║╚██╔╝██║╚════██║██╔══╝  ██║  ██║██║   ██║██╔══╝  
+		██║ ╚═╝ ██║███████║███████╗██████╔╝╚██████╔╝███████╗
+		╚═╝     ╚═╝╚══════╝╚══════╝╚═════╝  ╚═════╝ ╚══════╝
+	                  Thanks for using msedge.
+	                     - noobergoober :)
+	--]]
+	
+	local player = game:GetService("Players").LocalPlayer
+	local gui = player:WaitForChild("PlayerGui"):WaitForChild("internalmsedge")
+	local Exit = gui.Main.Exit
+	
+	Exit.MouseButton1Click:Connect(function()
+		pcall(function()
+			gui:Destroy()
+		end)
+	end)
+end
+coroutine.wrap(ZLFME_fake_script)()
+local function OMWSL_fake_script()
+	local script = Instance.new('LocalScript', Main)
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(OMWSL_fake_script)()
+local function VTJZWZ_fake_script()
+	local script = Instance.new('LocalScript', Main)
+
+	--[[
+		███╗   ███╗███████╗███████╗██████╗  ██████╗ ███████╗
+		████╗ ████║██╔════╝██╔════╝██╔══██╗██╔════╝ ██╔════╝
+		██╔████╔██║███████╗█████╗  ██║  ██║██║  ███╗█████╗  
+		██║╚██╔╝██║╚════██║██╔══╝  ██║  ██║██║   ██║██╔══╝  
+		██║ ╚═╝ ██║███████║███████╗██████╔╝╚██████╔╝███████╗
+		╚═╝     ╚═╝╚══════╝╚══════╝╚═════╝  ╚═════╝ ╚══════╝
+	                  Thanks for using msedge.
+	                     - noobergoober :)
+	--]]
+	
+	warn("             Welcome! " .. game.Players.LocalPlayer.Name)
+	warn("███╗   ███╗███████╗███████╗██████╗  ██████╗ ███████╗")
+	warn("████╗ ████║██╔════╝██╔════╝██╔══██╗██╔════╝ ██╔════╝")
+	warn("██╔████╔██║███████╗█████╗  ██║  ██║██║  ███╗█████╗  ")
+	warn("██║╚██╔╝██║╚════██║██╔══╝  ██║  ██║██║   ██║██╔══╝  ")
+	warn("██║ ╚═╝ ██║███████║███████╗██████╔╝╚██████╔╝███████╗")
+	warn("╚═╝     ╚═╝╚══════╝╚══════╝╚═════╝  ╚═════╝ ╚══════╝")
+	print("██╗███╗   ██╗████████╗███████╗██████╗ ███╗   ██╗ █████╗ ██╗     ")
+	print("██║████╗  ██║╚══██╔══╝██╔════╝██╔══██╗████╗  ██║██╔══██╗██║     ")
+	print("██║██╔██╗ ██║   ██║   █████╗  ██████╔╝██╔██╗ ██║███████║██║     ")
+	print("██║██║╚██╗██║   ██║   ██╔══╝  ██╔══██╗██║╚██╗██║██╔══██║██║     ")
+	print("██║██║ ╚████║   ██║   ███████╗██║  ██║██║ ╚████║██║  ██║███████╗")
+	print("╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝")
+	
+	local sound = Instance.new("Sound")
+	sound.SoundId = "rbxassetid://9086208751"
+	sound.Volume = 1
+	sound.Parent = game:GetService("Workspace")
+	sound:Play()
+	
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "Welcome",
+		Text = "Welcome to the msedge Internal! User: " .. game.Players.LocalPlayer.Name,
+		Duration = 15
+	})
+	
+end
+coroutine.wrap(VTJZWZ_fake_script)()
