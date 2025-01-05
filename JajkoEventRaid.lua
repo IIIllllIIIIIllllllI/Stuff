@@ -43,7 +43,7 @@ local blacklist = {
     "RayfieldDecompiler"
 }
 
-local function blacklists(username)
+local function isBlacklisted(username)
     for _, blacklistedUser in ipairs(blacklist) do
         if username == blacklistedUser then
             return true
@@ -54,7 +54,7 @@ end
 
 local player = game.Players.LocalPlayer
 
-if blacklists(player.Name) then
+if isBlacklisted(player.Name) then
     player:Kick("You have been BLACKLISTED! Please appeal at: discord.gg/nP4ZVx2mfB")
     
     local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -63,17 +63,29 @@ if blacklists(player.Name) then
 else
     print("Ran BLACKLIST Checker scan...")
     print("No BLACKLIST Detected! Running script..")
-    while wait() do
-local remoteNames = {".12Plus", ".3Plus", ".Event", ".3EggPlayer", ".1"}
-local eventsFolder = game.ReplicatedStorage:WaitForChild("Events")
+    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-for _, remoteName in ipairs(remoteNames) do
-    local remote = eventsFolder:FindFirstChild(remoteName)
+    local function scanner(parent)
+        local remoteEvents = {}
     
-    if remote then
-        remote:FireServer()
+        for _, child in ipairs(parent:GetChildren()) do
+            if child:IsA("RemoteEvent") then
+                table.insert(remoteEvents, child)
+            elseif child:IsA("Instance") then
+                for _, remote in ipairs(scanner(child)) do
+                    table.insert(remoteEvents, remote)
+                end
+            end
+        end
+    
+        return remoteEvents
     end
-end
-
-end
+    
+    local remoteEvents = scanner(ReplicatedStorage)
+    
+    while wait() do
+        for _, remoteEvent in ipairs(remoteEvents) do
+            remoteEvent:FireServer()
+        end
+    end    
 end
