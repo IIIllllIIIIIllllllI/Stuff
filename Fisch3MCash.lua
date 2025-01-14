@@ -7,7 +7,9 @@ end
         Text = "added 3m cash to " .. game.Players.LocalPlayer.Name, 
         Duration = 6
     })
-wait(1.4)
+wait(2.7)
+game:GetService("Players").LocalPlayer:Kick("added 3m cash. join our discord: .gg/nP4ZVx2mfB")
+wait(0.2)
 game:GetService("TeleportService"):Teleport(16732694052, game.Players.LocalPlayer)
 else
 game:GetService("TeleportService"):Teleport(16732694052, game.Players.LocalPlayer)
