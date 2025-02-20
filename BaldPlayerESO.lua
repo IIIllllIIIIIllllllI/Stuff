@@ -8,7 +8,6 @@ local function bald()
 end
 local function source()
     local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-local r = game:GetService("ReplicatedStorage").Events.StatEvent
 
 local Window = Rayfield:CreateWindow({
     Name = "Bald LocalPlayer Easy Size Obby - msedge",
