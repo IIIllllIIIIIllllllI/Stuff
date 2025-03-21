@@ -7,7 +7,7 @@ for i = 1, 3 do
 while chr and hum and hum.Parent do
     local delta = hb:Wait()
     if hum.MoveDirection.Magnitude > 0 then
-        chr:TranslateBy(hum.MoveDirection * delta * 5)
+        chr:TranslateBy(hum.MoveDirection * delta * 20)
     end
 end
 end
